@@ -1,10 +1,13 @@
 package org.launchcode.studio7;
 
-public class DVD {
+import java.util.ArrayList;
 
-    // TODO: Implement your custom interface.
+public class DVD extends Disc{
+    public static final int MAX_SPIN_RATE = 1600;
+    public static final int MIN_SPIN_RATE = 570;
 
-    // TODO: Determine which fields, methods, and constructors can be extended from the base class and which ones
-    //  need to be declared separately.
-
+    public DVD(String aName){
+        super(aName, MAX_SPIN_RATE, MIN_SPIN_RATE);
+    }
+    public DVD(String aName, ArrayList<Content> aContent) {super(aName, aContent, MAX_SPIN_RATE, MIN_SPIN_RATE);}
 }

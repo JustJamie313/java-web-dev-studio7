@@ -1,10 +1,16 @@
 package org.launchcode.studio7;
 
-public class CD {
+import java.util.ArrayList;
 
-    // TODO: Implement your custom interface.
+public class CD extends Disc{
+    public static final int MAX_SPIN_RATE = 500;
+    public static final int MIN_SPIN_RATE = 200;
 
-    // TODO: Determine which fields, methods, and constructors can be extended from the base class and which ones
-    //  need to be declared separately.
+    public CD(String name){
+        super(name, MAX_SPIN_RATE, MIN_SPIN_RATE);
+    }
+    public CD(String name, ArrayList<Content> content) {
+        super(name, content, MAX_SPIN_RATE, MIN_SPIN_RATE);
+    }
 
 }
